@@ -1,0 +1,41 @@
+{
+  "PF1QOL": {
+    "Settings": {
+      "ApplyDamageDialog": {
+        "Name": "Open Apply Damage dialog",
+        "Hint": "When the Apply Damage dialog opens without holding Shift. Holding Shift does the opposite.",
+        "Never": "Never (PF1 11 default)",
+        "Multiple": "With two or more targets",
+        "Always": "Always"
+      },
+      "ApplyDamageRules": {
+        "Name": "Apply Damage dialog: v14 damage rules",
+        "Hint": "In the Apply Damage dialog: apply energy vulnerabilities (+50%), make precision, area and nonlethal immunity work on mixed damage, and use only the largest DR instead of stacking them."
+      }
+    },
+    "AutoPrice": {
+      "Label": "Auto Price",
+      "Hint": "Calculate the price from the base price, masterwork, enhancement bonus and modifications. The Price field then holds the mundane base price."
+    },
+    "Modifications": {
+      "Label": "Modifications",
+      "Add": "Add Modification",
+      "Edit": "Edit Modification",
+      "Save": "Save",
+      "Delete": "Delete Modification",
+      "DeleteConfirm": "Delete the modification \"{name}\"?",
+      "None": "No modifications.",
+      "NotPriced": "Turn on Auto Price to include modifications in the price.",
+      "Name": "Name",
+      "Enhancement": "Enhancement Equivalent",
+      "EnhancementHint": "Counts as this much extra enhancement bonus when pricing, like +1 for keen.",
+      "Price": "Price (gp)",
+      "PriceHint": "Flat cost added to the price."
+    },
+    "Price": {
+      "Base": "Base Price",
+      "Total": "Total Price",
+      "OverLimit": "Total enhancement exceeds +10, which has no listed price."
+    }
+  }
+}

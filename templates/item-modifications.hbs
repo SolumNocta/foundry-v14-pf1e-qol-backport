@@ -1,0 +1,47 @@
+<div class="pf1qol-modifications">
+  <h3 class="form-header">
+    {{localize "PF1QOL.Modifications.Label"}}
+    {{#if editable}}
+    <a class="pf1qol-mod-add" data-tooltip="PF1QOL.Modifications.Add"><i class="fa-solid fa-plus"></i></a>
+    {{/if}}
+  </h3>
+
+  <div class="form-group">
+    <label>{{localize "PF1QOL.AutoPrice.Label"}}</label>
+    <div class="form-fields">
+      <input type="checkbox" class="pf1qol-autoprice" {{checked autoPrice}} {{disabled (not editable)}}>
+    </div>
+    <p class="hint">{{localize "PF1QOL.AutoPrice.Hint"}}</p>
+  </div>
+
+  {{#if mods.length}}
+  <ol class="pf1qol-mod-list">
+    {{#each mods}}
+    <li class="pf1qol-mod" data-mod-id="{{id}}">
+      <span class="pf1qol-mod-name">{{name}}</span>
+      {{#if enh}}<span class="pf1qol-tag" data-tooltip="PF1QOL.Modifications.EnhancementHint">+{{enh}}</span>{{/if}}
+      {{#if price}}<span class="pf1qol-tag">{{priceLabel}}</span>{{/if}}
+      {{#if @root.editable}}
+      <a class="pf1qol-mod-edit" data-tooltip="PF1QOL.Modifications.Edit"><i class="fa-solid fa-pen-to-square"></i></a>
+      <a class="pf1qol-mod-delete" data-tooltip="PF1QOL.Modifications.Delete"><i class="fa-solid fa-trash"></i></a>
+      {{/if}}
+    </li>
+    {{/each}}
+  </ol>
+  {{#unless autoPrice}}<p class="hint">{{localize "PF1QOL.Modifications.NotPriced"}}</p>{{/unless}}
+  {{else}}
+  <p class="hint">{{localize "PF1QOL.Modifications.None"}}</p>
+  {{/if}}
+
+  {{#if autoPrice}}
+  <ul class="pf1qol-breakdown">
+    {{#each breakdown.parts}}
+    <li><span>{{label}}{{#if detail}} ({{detail}}){{/if}}</span><span>{{valueLabel}}</span></li>
+    {{/each}}
+    <li class="pf1qol-breakdown-total"><span>{{localize "PF1QOL.Price.Total"}}</span><span>{{breakdown.totalLabel}}</span></li>
+  </ul>
+  {{#if breakdown.overLimit}}
+  <p class="pf1qol-warning">{{localize "PF1QOL.Price.OverLimit"}}</p>
+  {{/if}}
+  {{/if}}
+</div>
