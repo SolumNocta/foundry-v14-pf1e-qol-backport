@@ -1,3 +1,22 @@
+/* Apply Damage dialog: keep the window on screen and scroll the target list, so the Apply button stays visible. */
+form.application.pf1-v2.apply-damage {
+  max-height: calc(100vh - 1rem);
+}
+
+form.application.pf1-v2.apply-damage .window-content > [data-application-part="form"] {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  min-height: 0;
+}
+
+form.application.pf1-v2.apply-damage .window-content .targets {
+  flex: 0 1 auto;
+  min-height: 7rem;
+  overflow-y: auto;
+  scrollbar-gutter: stable;
+}
+
 .pf1qol-modifications .form-header {
   display: flex;
   align-items: center;

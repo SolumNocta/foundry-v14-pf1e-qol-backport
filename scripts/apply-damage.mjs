@@ -61,6 +61,10 @@ export function patchApplyDamage() {
     return original.call(this, value, options);
   };
 
+  // The target list scrolls (see the stylesheet). Keep its position when the dialog re-renders after each change.
+  const formPart = pf1.applications.ApplyDamage.PARTS.form;
+  formPart.scrollable = [...(formPart.scrollable ?? []), ".targets"];
+
   if (game.settings.get(MODULE_ID, "applyDamageRules")) patchDialogRules();
 }
 

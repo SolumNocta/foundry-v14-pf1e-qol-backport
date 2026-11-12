@@ -11,6 +11,7 @@ https://github.com/SolumNocta/foundry-v14-pf1e-qol-backport/releases/latest/down
 ## Apply Damage dialog
 
 - **Opens automatically with two or more targets.** A single target still applies directly. Shift flips the default: it opens the dialog for one target and skips it for several. Client setting **Open Apply Damage dialog**: never (PF1 11 behaviour), with two or more targets (default), always.
+- **Long target lists scroll.** The window stays on screen and the target list gets a scroll bar, so the Apply button is always visible.
 - **v14 damage rules in the dialog** (world setting, on by default):
   - Energy vulnerabilities add +50%. They're listed per target and can be unticked.
   - Immunity to precision, area or nonlethal damage negates any damage instance that includes it (11.x only did so when the instance had no other type, so sneak attack got through).
